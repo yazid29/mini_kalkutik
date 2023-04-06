@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <b>Kalkulator Matematika</b>
+    </div>
+    <div class="container">
+        <p>
+            Sebuah website sederhana untuk menghitung nilai luas dan keliling bangun datar
+        </p>
+    </div>
+
+    <div class="tabs-bar">
+        <button class="tab" onclick="openTab('LuasSegitiga')">Luas Segitiga</button>
+        <button class="tab" onclick="openTab('KelilingSegitiga')">Keliling Segitiga</button>
+        <button class="tab" onclick="openTab('LuasJajargenjang')">Luas Jajargenjang</button>
+        <button class="tab" onclick="openTab('KelilingJajargenjang')">Keliling Jajargenjang</button>
+    </div>
+    <div id="LuasSegitiga" class="tabs bangun">
+        <h1>LUAS SEGITIGA</h1>
+        <div class="content">
+            <div class="item">
+                <img src="segitiga.jpg" alt="segitiga">
+            </div>
+            <div class="item">
+                <a>Rumus Luas Segitiga Yaitu :</a><br>
+                <h4>L = 1/2 x a x t</h4>
+                <a>Dimana :</a><br>
+                <a>L = Luas</a><br>
+                <a>a = Panjang Alas</a><br>
+                <a>t = Tinggi</a><br>
+            </div>
+        </div>
+
+        <form action="" method="post" onsubmit="return false">
+            <h1>Hitung Luas Segitiga</h1>
+            <input type="text" name="alas" id="alas" placeholder="Nilai Alas">
+            <input type="text" name="tinggi" id="tinggi" placeholder="Nilai Tinggi">
+            <div id="hasil1" style="display:none">
+                <b id="rumus_luas_saja"></b><br>
+                <b id="rumus_luas_angka"></b><br>
+                <b id="luas"></b><br>
+            </div>
+            <input type="submit" name="button" onClick="hitung_luas_segitiga()" value="Hitung">
+            <input type="reset" value="Reset" onClick="reset1()" />
+        </form>
+    </div>
+    <div id="KelilingSegitiga" class="tabs bangun" style="display:none">
+        <h1>KELILING SEGITIGA</h1>
+        <div class="content">
+            <div class="item">
+                <img src="segitiga.jpg" alt="segitiga">
+            </div>
+            <div class="item">
+                <a>Rumus Keliling Segitiga Yaitu :</a><br>
+                <h4>K = S1 + S2 + S3</h4>
+                <a>Dimana :</a><br>
+                <a>K = Keliling</a><br>
+                <a>S1 = Sisi A</a><br>
+                <a>S2 = Sisi B</a><br>
+                <a>S3 = Sisi C</a><br>
+            </div>
+        </div>
+        <form action="" method="post" onsubmit="return false">
+            <h1>Hitung Keliling Segitiga</h1>
+            <input type="text" name="sisi_a" id="sisi_a" placeholder="Nilai Sisi A">
+            <input type="text" name="sisi_b" id="sisi_b" placeholder="Nilai Sisi B">
+            <input type="text" name="sisi_c" id="sisi_c" placeholder="Nilai Sisi C">
+            <div id="hasil2" style="display:none">
+                <b id="rumus_keliling_saja"></b><br>
+                <b id="rumus_keliling_angka"></b><br>
+                <b id="keliling"></b><br>
+            </div>
+            <input type="submit" name="button" onClick="hitung_keliling_segitiga()" value="Hitung">
+            <input type="reset" value="Reset" onClick="reset2()" />
+        </form>
+    </div>
+    <div id="LuasJajargenjang" class="tabs bangun" style="display:none">
+        <h1>LUAS JAJAR GENJANG</h1>
+        <div class="content">
+            <div class="item">
+                <img src="jajar-genjang.jpg" alt="jajargenjang">
+            </div>
+            <div class="item">
+                <a>Rumus Luas Jajar Genjang Yaitu :</a><br>
+                <h4>L = a x t</h4>
+                <a>Dimana :</a><br>
+                <a>L = Luas</a><br>
+                <a>a = Panjang Alas</a><br>
+                <a>t = Tinggi</a><br>
+            </div>
+        </div>
+        <form action="" method="post" onsubmit="return false">
+            <h1>Hitung Luas Jajar Genjang</h1>
+            <input type="text" name="alas_luas" id="alas_luas" placeholder="Nilai Alas">
+            <input type="text" name="tinggi_luas" id="tinggi_luas" placeholder="Nilai Tinggi">
+            <div id="hasil3" style="display:none">
+                <b id="rumus1_luas_saja"></b><br>
+                <b id="rumus1_luas_angka"></b><br>
+                <b id="luas1"></b><br>
+            </div>
+            <input type="submit" name="button" onClick="hitung_luas_jajar_genjang()" value="Hitung">
+            <input type="reset" value="Reset" onClick="reset3()" />
+        </form>
+    </div>
+    <div id="KelilingJajargenjang" class="tabs bangun" style="display:none">
+        <h1>KELILING JAJAR GENJANG</h1>
+        <div class="content">
+            <div class="item">
+                <img src="jajar-genjang.jpg" alt="jajargenjang">
+            </div>
+            <div class="item">
+                <a>Rumus Keliling Jajar Genjang Yaitu :</a><br>
+                <h4>K = 2 x (a + t)</h4>
+                <a>Dimana :</a><br>
+                <a>K = Keliling</a><br>
+                <a>a = Panjang Alas</a><br>
+                <a>t = Tinggi</a><br>
+            </div>
+        </div>
+        <form action="" method="post" onsubmit="return false">
+            <h1>Hitung Keliling Segitiga</h1>
+            <input type="text" name="alas_keliling" id="alas_keliling" placeholder="Nilai Alas">
+            <input type="text" name="tinggi_keliling" id="tinggi_keliling" placeholder="Nilai Tinggi">
+            <div id="hasil4" style="display:none">
+                <label id="rumus1_keliling_saja"></label>
+                <b id="rumus1_keliling_angka"></b><br>
+                <b id="keliling1"></b><br>
+            </div>
+            <input type="submit" name="button" onClick="hitung_keliling_jajar_genjang()" value="Hitung">
+            <input type="reset" value="Reset" onClick="reset4()" />
+        </form>
+    </div>
+</body>
+
+</html>

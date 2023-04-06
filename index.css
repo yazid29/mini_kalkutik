@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  padding-left: 3rem;
+}
+
+.container {
+  margin: 0 2rem;
+}
+
+.navbar {
+  background-color: #1969ff;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+}
+
+.item {
+  display: inline-block;
+  margin: 10px;
+}
+
+img {
+  height: 170px;
+}
+
+.tabs-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 2rem;
+}
+
+.tabs {
+  padding: 0 2rem;
+}
+
+.tab {
+  background-color: #1969ff;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.judul {
+  margin: 0 2px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  display: inline-block;
+  background-color: #1969ff;
+  color: white;
+  padding: 14px 40px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #4b88f8;
+}
+
+input[type=reset] {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 14px 40px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: rgb(255, 58, 58);
+}
+
+
+/* Small */
+@media screen and (max-width:610px) {
+  .tabs-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tab {
+    height: 60px;
+    margin: 2px;
+    text-align: center;
+  }
+}
